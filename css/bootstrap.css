@@ -4153,7 +4153,7 @@ input[type="button"].btn-block {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.5rem 1rem;
 }
 
@@ -4173,7 +4173,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
@@ -4338,7 +4338,7 @@ input[type="button"].btn-block {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     -ms-flex-pack: start;
-    justify-content: flex-start;
+    justify-content: left;
   }
   .navbar-expand-lg .navbar-nav {
     -ms-flex-direction: row;

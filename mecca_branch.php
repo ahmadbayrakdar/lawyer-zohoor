@@ -1,0 +1,297 @@
+<?php
+// Define default language
+$lang = isset($_GET['lang']) ? $_GET['lang'] : 'ar';
+
+// Load language file based on body class
+$lang_file = ($lang == 'ar') ? './json/ar.json' : './json/en.json';
+$json_data = file_get_contents($lang_file);
+
+// Check if JSON data is loaded successfully
+if ($json_data === false) {
+  die('Failed to load language file');
+}
+
+$texts = json_decode($json_data, true);
+?>
+
+<!DOCTYPE html>
+<html lang="<?php echo $lang; ?>">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+
+  <title>Lawyer Zohoor</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- lightbox Gallery-->
+  <link rel="stylesheet" href="css/ekko-lightbox.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="<?php echo $lang; ?>">
+  <!-- header section strats -->
+  <header class="header_section innerpage_header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.php">
+          <!-- <span> Lawyer Zohoor </span> -->
+          <img src="./images/small-logo.png" alt="logo" />
+        </a>
+        <div class="absoluteMenue" id="">
+
+          <button class="toggleLanguage" onclick="toggleLanguage()">
+            <?php echo ($lang == 'en') ? 'ar' : 'en'; ?>
+          </button>
+
+          <div class="custom_menu-btn">
+
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.php">
+                  <?php
+                  echo $texts['home'];
+                  ?>
+                </a>
+                <a href="about.php">
+                  <?php
+                  echo $texts['about'];
+                  ?>
+                </a>
+                <a href="mecca_branch.php">
+                  <?php
+                  echo $texts['macca'];
+                  ?>
+                </a>
+                <a href="service.php">
+                  <?php
+                  echo $texts['services'];
+                  ?>
+                </a>
+                <a href="who_we_are.php">
+                  <?php
+                  echo $texts['get_to_know_us'];
+                  ?>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- gallery section -->
+
+  <div class="gallery_section">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2>
+          <?php
+          echo $texts['macca'];
+          ?>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 col-md-6 px-0 maccaGalleryImage">
+          <div class="img-box">
+            <img src="images/macca/1.jpg" alt="" />
+            <a href="images/macca/1.jpg" data-toggle="lightbox" data-gallery="gallery">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3 px-0 maccaGalleryImage">
+          <div class="img-box">
+            <img src="images/macca/2.jpg" alt="" />
+            <a href="images/macca/2.jpg" data-toggle="lightbox" data-gallery="gallery">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 px-0 maccaGalleryImage">
+          <div class="img-box">
+            <img src="images/macca/3.jpg" alt="" />
+            <a href="images/macca/3.jpg" data-toggle="lightbox" data-gallery="gallery">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 px-0 maccaGalleryImage">
+          <div class="img-box">
+            <img src="images/macca/4.jpg" alt="" />
+            <a href="images/macca/4.jpg" data-toggle="lightbox" data-gallery="gallery">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3 px-0 maccaGalleryImage">
+          <div class="img-box">
+            <img src="images/macca/5.jpg" alt="" />
+            <a href="images/macca/5.jpg" data-toggle="lightbox" data-gallery="gallery">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-6 px-0 maccaGalleryImage">
+          <div class="img-box">
+            <img src="images/macca/6.jpg" alt="" />
+            <a href="images/macca/6.jpg" data-toggle="lightbox" data-gallery="gallery">
+              <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="btn-box">
+          <a href=""> View All </a>
+        </div> -->
+    </div>
+  </div>
+
+  <!-- end gallery section -->
+
+  <!-- info section -->
+  <section id="info_section" class="info_section">
+    <div class="container">
+      <div class="row info_main_row">
+        <div class="col-md-6 col-lg-4">
+          <h4>
+            <?php
+            echo $texts['call_us'];
+            ?>
+          </h4>
+          <div class="info_contact">
+            <a href="tel:+9660501988815">
+              <span>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </span>
+              <span class="textLeftToRight"> +966 050 1988815 </span>
+            </a>
+            <a href="tel:+9660557107240">
+              <span>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </span>
+              <span class="textLeftToRight"> +966 055 7107240 </span>
+            </a>
+            <a href="tel:+9660557107240">
+              <span>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </span>
+              <span class="textLeftToRight"> +966 055 7107240 </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4>
+            <?php
+            echo $texts['contact_us'];
+            ?>
+          </h4>
+          <div class="info_contact">
+            <a target="_blank" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%B1%D8%A7%D8%A6%D8%AF%D8%A7%D8%AA+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9%E2%80%AD/@21.3676293,39.8762096,18z/data=!4m6!3m5!1s0x15c205a3908e699b:0xa1e6b0b9a8ad3006!8m2!3d21.3687458!4d39.8781944!16s%2Fg%2F11rkl8hvmx?entry=ttu">
+              <span>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </span>
+              <span>
+                <?php
+                echo $texts['makkah'];
+                ?>
+              </span>
+            </a>
+            <a target="_blank" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%B1%D8%A7%D8%A6%D8%AF%D8%A7%D8%AA+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9%E2%80%AD/@24.8088646,46.6641303,18z/data=!3m1!4b1!4m6!3m5!1s0x3e2ee3acb7c93cf5:0xa2edbdcf34b373a8!8m2!3d24.8088622!4d46.6654178!16s%2Fg%2F11pv58rhf9?entry=ttu">
+              <span>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </span>
+              <span>
+                <?php
+                echo $texts['riyadh'];
+                ?>
+              </span>
+            </a>
+            <a href="mailto:Lawyer.raydat@gmail.com">
+              <span>
+                <i class="fa fa-envelope"></i>
+              </span>
+              <span> Lawyer.raydat@gmail.com </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4>
+            <?php
+            echo $texts['follow_us'];
+            ?>
+          </h4>
+          <div class="social_box">
+            <!-- <a target="_blank" href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a> -->
+            <a target="_blank" href="https://twitter.com/rayidat_law">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <!-- <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a> -->
+            <a target="_blank" href="https://www.instagram.com/rayidat_law">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p class="textLeftToRight">
+        &copy; <span id="displayYear"></span>
+        <?php
+        echo $texts['rights_reserved'];
+        ?>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- lightbox Gallery-->
+  <script src="js/ekko-lightbox.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- toogle language -->
+  <script src="./js/toggleLanguage.js"></script>
+</body>
+
+</html>

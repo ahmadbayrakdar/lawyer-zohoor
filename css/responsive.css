@@ -15,6 +15,12 @@
   .info_main_row>div:nth-child(2) {
     margin-bottom: 25px;
   }
+
+  .absoluteMenue{
+    width: 100%;
+    justify-content: space-around;
+    right: 0;
+  }
 }
 
 @media (max-width: 800px) {}
@@ -96,6 +102,10 @@
 
   .contact_section .form_container {
     padding: 45px 25px;
+  }
+  
+  .carousel-control-prev, .carousel-control-next{
+    display: none;
   }
 }
 
