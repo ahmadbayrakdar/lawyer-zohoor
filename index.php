@@ -42,10 +42,15 @@ $texts = json_decode($json_data, true);
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- our clients -->
+  <link rel="stylesheet" href="./css/ourclients.css">
 </head>
 
 <body class="<?php echo $lang; ?>">
@@ -144,7 +149,7 @@ $texts = json_decode($json_data, true);
       </div>
     </div>
     <div class="detail-box">
-      <div class="col-md-8 col-lg-6 mx-auto">
+      <div>
         <div class="inner_detail-box">
           <p>
             <?php
@@ -181,7 +186,7 @@ $texts = json_decode($json_data, true);
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/aboutus.jpg" alt="" />
+            <img src="images/ryadh/1.jpg" alt="" />
           </div>
         </div>
         <div class="col-md-6">
@@ -198,11 +203,6 @@ $texts = json_decode($json_data, true);
               echo $texts['leading_company'];
               ?>
             </p>
-            <a href="./about.php">
-              <?php
-              echo $texts['read_more'];
-              ?>
-            </a>
           </div>
         </div>
       </div>
@@ -211,74 +211,7 @@ $texts = json_decode($json_data, true);
 
   <!-- end about section -->
 
-  <!-- gallery section -->
 
-  <div class="gallery_section">
-    <div class="container-fluid">
-      <div class="heading_container heading_center">
-        <h2>
-          <?php
-          echo $texts['macca'];
-          ?>
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-8 col-md-6 px-0 maccaGalleryImage">
-          <div class="img-box">
-            <img src="images/macca/1.jpg" alt="" />
-            <a href="images/macca/1.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-3 px-0 maccaGalleryImage">
-          <div class="img-box">
-            <img src="images/macca/2.jpg" alt="" />
-            <a href="images/macca/2.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 px-0 maccaGalleryImage">
-          <div class="img-box">
-            <img src="images/macca/3.jpg" alt="" />
-            <a href="images/macca/3.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 px-0 maccaGalleryImage">
-          <div class="img-box">
-            <img src="images/macca/4.jpg" alt="" />
-            <a href="images/macca/4.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-3 px-0 maccaGalleryImage">
-          <div class="img-box">
-            <img src="images/macca/5.jpg" alt="" />
-            <a href="images/macca/5.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-8 col-md-6 px-0 maccaGalleryImage">
-          <div class="img-box">
-            <img src="images/macca/6.jpg" alt="" />
-            <a href="images/macca/6.jpg" data-toggle="lightbox" data-gallery="gallery">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="btn-box">
-          <a href=""> View All </a>
-        </div> -->
-    </div>
-  </div>
-
-  <!-- end gallery section -->
 
   <!-- service section -->
 
@@ -506,9 +439,28 @@ $texts = json_decode($json_data, true);
                   echo $texts['execution_of_judgments'];
                   ?>
                 </li>
-                <li><?php
-                    echo $texts['preparation_of_grievance_list'];
-                    ?></li>
+                <li>
+                  <?php
+                  echo $texts['preparation_of_grievance_list'];
+                  ?>
+                </li>
+              </ul>
+              <!-- <a href=""> Read More </a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/services/others.jpg" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                <?php
+                echo $texts['other_services'];
+                ?>
+              </h5>
+              <ul>
                 <li>
                   <?php
                   echo $texts['study_all_cases'];
@@ -517,6 +469,47 @@ $texts = json_decode($json_data, true);
                 <li>
                   <?php
                   echo $texts['response_memorandum'];
+                  ?>
+                </li>
+                <br />
+                <li>
+                  <?php
+                  echo $texts['company_formation'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['mediation_arbitration'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['intellectual_property_services'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['bankruptcy_insolvency'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['auctions_probates'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['commercial_franchise'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['real_estate_registration'];
+                  ?>
+                </li>
+                <li>
+                  <?php
+                  echo $texts['documentation'];
                   ?>
                 </li>
               </ul>
@@ -541,42 +534,101 @@ $texts = json_decode($json_data, true);
           ?>
         </h2>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div>
-            <div class="ourMessage">
-              <h5>
-                <?php
-                echo $texts['our_message'];
-                ?>
-              </h5>
-              <p>
-                <?php
-                echo $texts['aim_to_be_first'];
-                ?>
-              </p>
-              <h5>
-                <?php
-                echo $texts['our_vision'];
-                ?>
-              </h5>
-              <p>
-                <?php
-                echo $texts['our_goals'];
-                ?>
-              </p>
-              <!-- <a href=""> Read More </a> -->
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <div class="ourMessage">
+                <h5>
+                  <?php
+                  echo $texts['our_branches'];
+                  ?>
+                </h5>
+                <p>
+                  <?php
+                  echo $texts['our_branches_J_R'];
+                  ?>
+                </p>
+                <h5>
+                  <?php
+                  echo $texts['our_message'];
+                  ?>
+                </h5>
+                <p>
+                  <?php
+                  echo $texts['aim_to_be_first'];
+                  ?>
+                </p>
+                <h5>
+                  <?php
+                  echo $texts['our_vision'];
+                  ?>
+                </h5>
+                <p>
+                  <?php
+                  echo $texts['our_goals'];
+                  ?>
+                </p>
+                <!-- <a href=""> Read More </a> -->
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-12 getToKnowUsImage">
-          <img src="./images/gettoknowus.png" alt="" />
+          <div class="col-lg-12 getToKnowUsImage">
+            <img src="./images/gettoknowus.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- end who we are section -->
+
+
+  <!-- new client section -->
+  <section class="SectionRecommendation block content-3">
+    <div class="block gap-2 content-full">
+      <h2>
+        <?php
+        echo $texts['our_clients']
+        ?>
+      </h2>
+      <div class="inline">
+        <ul id="scroller" class="UserList Scroller inline gap-1">
+          <?php foreach ($texts['clients'] as $client) { ?>
+            <li>
+              <div class="Card block-center-center gap-1">
+                <button class="RemoveBtn">
+                </button>
+                <!-- <img src="<?php echo $client['imageLink']; ?>" alt="" /> -->
+                <h5>
+                  <div class="Name">
+                    <?php echo $client['name']; ?>
+                  </div>
+                </h5>
+              </div>
+            </li>
+          <?php } ?>
+        </ul>
+        <div class="Controls block-center-center">
+          <div class="inline content-3 space-between content-full">
+            <button id="PrevBtn" class="ControlsBtn previous" aria-label="Previous item" title="Previous item" onclick="scroller.scrollBy(-500, 0)">
+              <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+              </svg>
+            </button>
+            <button id="NextBtn" class="ControlsBtn next" aria-label="Next item" title="Next item" onclick="scroller.scrollBy(500, 0)">
+              <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end new client section -->
+
 
   <!-- client section -->
 
@@ -746,21 +798,21 @@ $texts = json_decode($json_data, true);
             ?>
           </h4>
           <div class="info_contact">
-            <a href="tel:+9660501988815">
+            <a target="_blank" href="tel:+9660501988815">
               <span>
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </span>
               <span class="textLeftToRight"> +966 050 1988815 </span>
             </a>
-            <a href="tel:+9660557107240">
+            <a target="_blank" href="tel:+9660557107240">
               <span>
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </span>
               <span class="textLeftToRight"> +966 055 7107240 </span>
             </a>
-            <a href="tel:+9660557107240">
+            <a target="_blank" href="https://wa.me/+9660557107240">
               <span>
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
               </span>
               <span class="textLeftToRight"> +966 055 7107240 </span>
             </a>
@@ -773,13 +825,13 @@ $texts = json_decode($json_data, true);
             ?>
           </h4>
           <div class="info_contact">
-            <a target="_blank" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%B1%D8%A7%D8%A6%D8%AF%D8%A7%D8%AA+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9%E2%80%AD/@21.3676293,39.8762096,18z/data=!4m6!3m5!1s0x15c205a3908e699b:0xa1e6b0b9a8ad3006!8m2!3d21.3687458!4d39.8781944!16s%2Fg%2F11rkl8hvmx?entry=ttu">
+            <a target="_blank" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%B1%D8%A7%D8%A6%D8%AF%D8%A7%D8%AA+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9%E2%80%AD/@21.6005247,39.1987431,17z/data=!3m1!4b1!4m6!3m5!1s0x15c3d16d0aa5b4d3:0x55772ffcb6421a44!8m2!3d21.6005197!4d39.201318!16s%2Fg%2F11vqhpsjx8?entry=ttu">
               <span>
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
               </span>
               <span>
                 <?php
-                echo $texts['makkah'];
+                echo $texts['Jeddah'];
                 ?>
               </span>
             </a>
@@ -793,7 +845,7 @@ $texts = json_decode($json_data, true);
                 ?>
               </span>
             </a>
-            <a href="mailto:Lawyer.raydat@gmail.com">
+            <a target="_blank" href="mailto:Lawyer.raydat@gmail.com">
               <span>
                 <i class="fa fa-envelope"></i>
               </span>
@@ -812,13 +864,28 @@ $texts = json_decode($json_data, true);
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a> -->
             <a target="_blank" href="https://twitter.com/rayidat_law">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
             </a>
             <!-- <a href="">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a> -->
             <a target="_blank" href="https://www.instagram.com/rayidat_law">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a target="_blank" href="https://www.tiktok.com/@raydat_law">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a target="_blank" href="https://www.snapchat.com/add/rayidat_law">
+              <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
+            </a>
+            <!-- <a target="_blank" href="https://www.snapchat.com/add/rayidat_law">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a> -->
+            <a target="_blank" href="https://www.facebook.com/zuhor.alnahre">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a target="_blank" href="https://t.me/+oY9fe_hcmfI3ODQ0">
+              <i class="fa-brands fa-telegram" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -851,6 +918,19 @@ $texts = json_decode($json_data, true);
   <script src="js/custom.js"></script>
   <!-- toogle language -->
   <script src="./js/toggleLanguage.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) { // Adjust the value based on when you want the background to change
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

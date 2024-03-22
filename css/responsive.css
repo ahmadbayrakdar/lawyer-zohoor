@@ -17,7 +17,6 @@
   }
 
   .absoluteMenue{
-    width: 100%;
     justify-content: space-around;
     right: 0;
   }
@@ -102,10 +101,6 @@
 
   .contact_section .form_container {
     padding: 45px 25px;
-  }
-  
-  .carousel-control-prev, .carousel-control-next{
-    display: none;
   }
 }
 

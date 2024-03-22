@@ -50,7 +50,35 @@
   "call_us": "اتصل بنا",
   "makkah": "مكة : جــــــــــــــوار محكمــة الأحـــــوال الشخصيـــــــــة - النسيـــم",
   "riyadh": "الرياض : طريق الثمامة – الياسمين – جوار محكمة الأحوال الشخصية",
-  "rights_reserved": "جميع الحقوق محفوظة"
+  "Jeddah": "جدة: صلاح بن جناح، الصفا، المملكة العربية السعودية",
+  "rights_reserved": "جميع الحقوق محفوظة",
+  "our_branches": "فروعنا",
+  "our_branches_J_R": "جدة - الرياض",
+  "company_formation": "تأسيس الشركات المحلية والأجنبية",
+  "mediation_arbitration": "الوساطة والتحكيم التجاري",
+  "intellectual_property_services": "خدمات الملكية الفكرية",
+  "bankruptcy_insolvency": "الإفلاس والتصفية",
+  "auctions_probates": "المزادات والتركات",
+  "commercial_franchise": "الامتياز التجاري",
+  "real_estate_registration": "التسجيل العيني للعقار",
+  "documentation": "التوثيق",
+  "our_clients": "عملائنا",
+  "clients": {
+    "client_1": { "name": "شركة ازيان للاتصالات", "imageLink": "#" },
+    "client_2": { "name": "بنك الراجحى", "imageLink": "#" },
+    "client_3": { "name": "بنك الرياض", "imageLink": "#" },
+    "client_4": { "name": "شركة العربيه التجاريه", "imageLink": "#" },
+    "client_5": { "name": "موسسه الفعاليات لبرمجه المعلومات", "imageLink": "#" },
+    "client_6": { "name": "شركة الفيصل للتطوير العقارى", "imageLink": "#" },
+    "client_7": { "name": "شركة الزمزى للتطوير", "imageLink": "#" },
+    "client_8": { "name": "شركة اجا للتسويق الالكترونى القابضه", "imageLink": "#" },
+    "client_9": { "name": "شركة ون منت اللوجستيه", "imageLink": "#" },
+    "client_10": { "name": "شركة سماء العربيه للتصنيع", "imageLink": "#" },
+    "client_11": { "name": "شركة سماء  الشمال للصناعه", "imageLink": "#" },
+    "client_12": { "name": "شركة اجا العالم للانتاج المرئي والمسموع", "imageLink": "#" },
+    "client_13": { "name": "شركة التجاره العالمية للتداول", "imageLink": "#" },
+    "client_14": { "name": "مجمع اسامه الطبي", "imageLink": "#" }
+  }
 }
 
 

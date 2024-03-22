@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..700&display=swap');
+
+@import 'https://unpkg.com/open-props';
+@import 'https://www.unpkg.com/layout-craft@1.0.1/dist/utilities.css';
+
+:root {
+  color-scheme: dark;
+  --surface-1: oklch(0.17 0 0);
+  --surface-2: oklch(0.24 0 0);
+  --text-1: #131f2d;
+  --text-2: oklch(0.57 0 0);
+}
+
+.SectionRecommendation {
+  /* --_content: 570px; */
+  font-size: 0.9375rem;
+  border-block: var(--border-size-1) solid oklch(0.97 0 0 / 0.15);
+  padding-block: var(--size-3);
+  position: relative;
+  margin-inline: auto;
+  isolation: isolate;
+  margin-bottom: 50px;
+}
+
+.SectionRecommendation :where(button) {
+  border: unset;
+  cursor: pointer;
+}
+
+.SectionRecommendation .UserList {
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.SectionRecommendation .UserList::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .SectionRecommendation .UserList {
+    padding-inline: 0.75rem;
+    scroll-padding-inline: 0.75rem;
+  }
+}
+
+.SectionRecommendation .Card {
+  scroll-snap-align: start;
+  border-radius: 10px;
+  padding: 0.875rem;
+  position: relative;
+  /* block-size: 204px; */
+  text-decoration: none;
+}
+
+.SectionRecommendation .Card figcaption {
+  --_gap: 0.2ex;
+}
+
+.SectionRecommendation .Card img {
+  --size: 150px;
+  block-size: var(--size);
+  inline-size: var(--size);
+}
+
+.SectionRecommendation .Card .Name {
+  color: var(--text-1);
+  font-weight: var(--font-weight-6);
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.SectionRecommendation .Card .Username {
+  color: var(--text-2);
+}
+
+.SectionRecommendation .Card .Name,
+.SectionRecommendation .Card .Username {
+  max-inline-size: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.SectionRecommendation .Card .RemoveBtn {
+  background: transparent;
+  border: unset;
+  border-radius: var(--radius-round);
+  position: absolute;
+  inset-inline-end: var(--size-2);
+  inset-block-start: 0.75rem;
+  scale: 0.8;
+}
+
+.SectionRecommendation .Card .FollowButton {
+  background-color: var(--text-1);
+  color: var(--surface-1);
+  font-weight: var(--font-weight-5);
+  padding-inline: var(--size-5);
+  border-radius: 10px;
+  padding-block: var(--size-2);
+  inline-size: 100%;
+}
+
+.SectionRecommendation .Controls {
+  position: absolute;
+  inset-inline: calc(var(--size-9) * -1);
+  /* block-size: 204px; */
+  z-index: -1;
+}
+
+.SectionRecommendation .Controls .Wrapper {
+  --_content: 700px;
+}
+
+@media (max-width: 768px) {
+  .SectionRecommendation .Controls {
+    display: none;
+  }
+}
+
+.SectionRecommendation .ControlsBtn {
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0.75rem;
+  border-radius: var(--radius-round);
+  background-color: var(--surface-2);
+  color: var(--text-2);
+  transition: 0.2s ease;
+  opacity: 0;
+}
+
+.SectionRecommendation .ControlsBtn:hover {
+  transform: scale(1.07);
+}
+
+.SectionRecommendation .ControlsBtn:active {
+  transform: scale(1.03);
+}
+
+.SectionRecommendation:hover .ControlsBtn {
+  opacity: 1;
+}
+
+.SectionRecommendation.body .Scroller {
+  scroll-timeline: --carousel inline;
+}
+
+.SectionRecommendation.body .next {
+  animation: auto next ease forwards;
+  animation-timeline: --carousel;
+}
+
+.SectionRecommendation.body .previous {
+  animation: auto prev ease forwards;
+  animation-timeline: --carousel;
+}
+
+@keyframes prev {
+  from {
+    visibility: hidden;
+  }
+}
+
+@keyframes next {
+  to {
+    visibility: hidden;
+  }
+}

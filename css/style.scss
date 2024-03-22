@@ -1,9 +1,9 @@
 $white: #ffffff;
-$black: #000000;
+$black: #131f2d;
 // $primary1: #004e9a;
 // $primary2: #428cd4;
-$primary1: #134854;
-$primary2: #d19b6f;
+$primary1: #131f2d;
+$primary2: #8b96c5;
 $bgColor:#041b2d;
 
 @mixin main-font {
@@ -142,7 +142,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: white;
-    box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: .07);
+    box-shadow: 0 0 5px 0 rgba($color: #131f2d, $alpha: .07);
     z-index: 7;
     border-radius: 100%;
     transition: all .3s;
@@ -430,7 +430,7 @@ a:focus {
 
 .gallery_section {
 
-  background-color: #f9f8f7;
+  background-color: #e7e9ee;
 
   .heading_container {
     margin-bottom: 30px;
@@ -576,7 +576,7 @@ a:focus {
     display: flex;
     align-items: center;
     color: $black;
-    background-color: #f9f8f7;
+    background-color: #e7e9ee;
 
     .img-box {
       position: relative;
@@ -724,7 +724,7 @@ a:focus {
       padding-left: 15px;
       outline: none;
       color: #101010;
-      box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: .05);
+      box-shadow: 0 0 5px 0 rgba($color: #131f2d, $alpha: .05);
       border-radius: 5px;
 
       &::placeholder {
