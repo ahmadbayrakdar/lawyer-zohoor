@@ -39,6 +39,8 @@ $texts = json_decode($json_data, true);
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -80,11 +82,6 @@ $texts = json_decode($json_data, true);
                   echo $texts['about'];
                   ?>
                 </a>
-                <a href="mecca_branch.php">
-                  <?php
-                  echo $texts['macca'];
-                  ?>
-                </a>
                 <a href="service.php">
                   <?php
                   echo $texts['services'];
@@ -115,36 +112,49 @@ $texts = json_decode($json_data, true);
           ?>
         </h2>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div>
-            <div class="ourMessage">
-              <h5>
-                <?php
-                echo $texts['our_message'];
-                ?>
-              </h5>
-              <p>
-                <?php
-                echo $texts['aim_to_be_first'];
-                ?>
-              </p>
-              <h5>
-                <?php
-                echo $texts['our_vision'];
-                ?>
-              </h5>
-              <p>
-                <?php
-                echo $texts['our_goals'];
-                ?>
-              </p>
-              <!-- <a href=""> Read More </a> -->
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <div class="ourMessage">
+                <h5>
+                  <?php
+                  echo $texts['our_branches'];
+                  ?>
+                </h5>
+                <p>
+                  <?php
+                  echo $texts['our_branches_J_R'];
+                  ?>
+                </p>
+                <h5>
+                  <?php
+                  echo $texts['our_message'];
+                  ?>
+                </h5>
+                <p>
+                  <?php
+                  echo $texts['aim_to_be_first'];
+                  ?>
+                </p>
+                <h5>
+                  <?php
+                  echo $texts['our_vision'];
+                  ?>
+                </h5>
+                <p>
+                  <?php
+                  echo $texts['our_goals'];
+                  ?>
+                </p>
+                <!-- <a href=""> Read More </a> -->
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-12 getToKnowUsImage">
-          <img src="./images/gettoknowus.png" alt="" />
+          <div class="col-lg-12 getToKnowUsImage">
+            <img src="./images/gettoknowus.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -163,21 +173,21 @@ $texts = json_decode($json_data, true);
             ?>
           </h4>
           <div class="info_contact">
-            <a href="tel:+9660501988815">
+            <a target="_blank" href="tel:+9660501988815">
               <span>
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </span>
               <span class="textLeftToRight"> +966 050 1988815 </span>
             </a>
-            <a href="tel:+9660557107240">
+            <a target="_blank" href="tel:+9660557107240">
               <span>
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </span>
               <span class="textLeftToRight"> +966 055 7107240 </span>
             </a>
-            <a href="tel:+9660557107240">
+            <a target="_blank" href="https://wa.me/+9660557107240">
               <span>
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
               </span>
               <span class="textLeftToRight"> +966 055 7107240 </span>
             </a>
@@ -190,13 +200,13 @@ $texts = json_decode($json_data, true);
             ?>
           </h4>
           <div class="info_contact">
-            <a target="_blank" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%B1%D8%A7%D8%A6%D8%AF%D8%A7%D8%AA+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9%E2%80%AD/@21.3676293,39.8762096,18z/data=!4m6!3m5!1s0x15c205a3908e699b:0xa1e6b0b9a8ad3006!8m2!3d21.3687458!4d39.8781944!16s%2Fg%2F11rkl8hvmx?entry=ttu">
+            <a target="_blank" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%B1%D8%A7%D8%A6%D8%AF%D8%A7%D8%AA+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9%E2%80%AD/@21.6005247,39.1987431,17z/data=!3m1!4b1!4m6!3m5!1s0x15c3d16d0aa5b4d3:0x55772ffcb6421a44!8m2!3d21.6005197!4d39.201318!16s%2Fg%2F11vqhpsjx8?entry=ttu">
               <span>
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
               </span>
               <span>
                 <?php
-                echo $texts['makkah'];
+                echo $texts['Jeddah'];
                 ?>
               </span>
             </a>
@@ -210,7 +220,7 @@ $texts = json_decode($json_data, true);
                 ?>
               </span>
             </a>
-            <a href="mailto:Lawyer.raydat@gmail.com">
+            <a target="_blank" href="mailto:Lawyer.raydat@gmail.com">
               <span>
                 <i class="fa fa-envelope"></i>
               </span>
@@ -229,13 +239,28 @@ $texts = json_decode($json_data, true);
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a> -->
             <a target="_blank" href="https://twitter.com/rayidat_law">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
             </a>
             <!-- <a href="">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a> -->
             <a target="_blank" href="https://www.instagram.com/rayidat_law">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a target="_blank" href="https://www.tiktok.com/@raydat_law">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a target="_blank" href="https://www.snapchat.com/add/rayidat_law">
+              <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
+            </a>
+            <!-- <a target="_blank" href="https://www.snapchat.com/add/rayidat_law">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a> -->
+            <a target="_blank" href="https://www.facebook.com/zuhor.alnahre">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a target="_blank" href="https://t.me/+oY9fe_hcmfI3ODQ0">
+              <i class="fa-brands fa-telegram" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -267,6 +292,19 @@ $texts = json_decode($json_data, true);
   <script src="js/custom.js"></script>
   <!-- toogle language -->
   <script src="./js/toggleLanguage.js"></script>
+  <!-- scrolling header -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) { // Adjust the value based on when you want the background to change
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

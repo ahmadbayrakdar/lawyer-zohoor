@@ -83,11 +83,6 @@ $texts = json_decode($json_data, true);
                   echo $texts['about'];
                   ?>
                 </a>
-                <a href="mecca_branch.php">
-                  <?php
-                  echo $texts['macca'];
-                  ?>
-                </a>
                 <a href="service.php">
                   <?php
                   echo $texts['services'];
@@ -292,6 +287,19 @@ $texts = json_decode($json_data, true);
   <script src="js/custom.js"></script>
   <!-- toogle language -->
   <script src="./js/toggleLanguage.js"></script>
+  <!-- scrolling header -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) { // Adjust the value based on when you want the background to change
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

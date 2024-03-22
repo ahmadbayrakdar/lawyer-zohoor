@@ -87,11 +87,6 @@ $texts = json_decode($json_data, true);
                   echo $texts['about'];
                   ?>
                 </a>
-                <a href="mecca_branch.php">
-                  <?php
-                  echo $texts['macca'];
-                  ?>
-                </a>
                 <a href="service.php">
                   <?php
                   echo $texts['services'];
@@ -919,6 +914,7 @@ $texts = json_decode($json_data, true);
   <!-- toogle language -->
   <script src="./js/toggleLanguage.js"></script>
 
+  <!-- scrolling header -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
