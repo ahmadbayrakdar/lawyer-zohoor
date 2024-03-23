@@ -126,7 +126,7 @@
 .SectionRecommendation .ControlsBtn {
   inline-size: 44px;
   block-size: 44px;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border-radius: var(--radius-round);
   background-color: var(--surface-2);
   color: var(--text-2);

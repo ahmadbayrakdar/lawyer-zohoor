@@ -465,6 +465,7 @@ body.ar .about_section .detail-box {
   top: 50%;
 }
 
+
 .about_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -605,6 +606,15 @@ body.ar .about_section .detail-box {
 .gallery_section .btn-box a:hover {
   background-color: transparent;
   color: #8b96c5;
+}
+
+.service_section.homePage {
+  background-color: #131f2d;
+  color: #fff;
+}
+
+.service_section.homePage h2{
+  color: #fff;
 }
 
 .service_section .box {

@@ -210,7 +210,7 @@ $texts = json_decode($json_data, true);
 
   <!-- service section -->
 
-  <section class="service_section layout_padding">
+  <section class="service_section homePage layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -583,11 +583,13 @@ $texts = json_decode($json_data, true);
   <!-- new client section -->
   <section class="SectionRecommendation block content-3">
     <div class="block gap-2 content-full">
-      <h2>
-        <?php
-        echo $texts['our_clients']
-        ?>
-      </h2>
+      <div class="heading_container heading_center">
+        <h2>
+          <?php
+          echo $texts['our_clients']
+          ?>
+        </h2>
+      </div>
       <div class="inline">
         <ul id="scroller" class="UserList Scroller inline gap-1">
           <?php foreach ($texts['clients'] as $client) { ?>
