@@ -37,7 +37,7 @@ body.en{
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 45px 0;
 }
 
 .layout_padding2 {
@@ -475,7 +475,8 @@ body.ar .about_section .detail-box {
 }
 
 .about_section .img-box{
-  height: 450px;
+  max-height: 450px;
+  max-width: 450px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -483,7 +484,7 @@ body.ar .about_section .detail-box {
 .about_section .img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .about_section .detail-box p {

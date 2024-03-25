@@ -27,6 +27,11 @@ $texts = json_decode($json_data, true);
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <link rel="icon" href="images/favicon.png" type="image/gif" />
 
   <title>Lawyer Zohoor</title>
