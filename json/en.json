@@ -49,8 +49,8 @@
   "follow_us": "Follow Us",
   "call_us": "Call Us",
   "makkah": "Makkah: Next to the Personal Status Court - An-Naseem",
-  "riyadh": "Riyadh: Thumamah Road - Al-Yasmin - Next to the Personal Status Court",
-  "Jeddah": "Jeddah: Salah Ibn Janah, Al-Safa, Saudi Arabia",
+  "riyadh": "Riyadh - Saudi Arabia",
+  "Jeddah": "Jeddah - Saudi Arabia",
   "rights_reserved": "All Rights Reserved",
   "our_branches": "Our Branches",
   "our_branches_J_R": "Jeddah - riyadh",
@@ -78,5 +78,12 @@
     "client_12": { "name": "AGA World for Visual and Auditory Production", "imageLink": "#" },
     "client_13": { "name": "Global Trade Company for Trading", "imageLink": "#" },
     "client_14": { "name": "Osama Medical Complex", "imageLink": "#" }
+  },
+  "contantus": {
+    "name": "Name",
+    "phone": "Phone Number",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
   }
 }

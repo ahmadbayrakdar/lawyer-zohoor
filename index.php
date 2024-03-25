@@ -46,11 +46,15 @@ $texts = json_decode($json_data, true);
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
+
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
   <!-- our clients -->
   <link rel="stylesheet" href="./css/ourclients.css">
+
+  <!-- contact us -->
+  <link rel="stylesheet" href="./css/contactus.css">
 </head>
 
 <body class="<?php echo $lang; ?>">
@@ -157,7 +161,7 @@ $texts = json_decode($json_data, true);
             ?>
           </h1>
           <div>
-            <a href="#info_section" class="slider-link">
+            <a href="#contactUs" class="slider-link">
               <?php
               echo $texts['contact_us'];
               ?>
@@ -181,7 +185,7 @@ $texts = json_decode($json_data, true);
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/ryadh/1.jpg" alt="" />
+            <img src="images/ryadh/1-<?php echo $lang; ?>.jpg" alt="featured image" />
           </div>
         </div>
         <div class="col-md-6">
@@ -463,18 +467,7 @@ $texts = json_decode($json_data, true);
                 </li>
                 <li>
                   <?php
-                  echo $texts['response_memorandum'];
-                  ?>
-                </li>
-                <br />
-                <li>
-                  <?php
                   echo $texts['company_formation'];
-                  ?>
-                </li>
-                <li>
-                  <?php
-                  echo $texts['mediation_arbitration'];
                   ?>
                 </li>
                 <li>
@@ -783,6 +776,62 @@ $texts = json_decode($json_data, true);
       </div>
     </section> -->
   <!-- end contact section -->
+
+
+  <!-- contact us -->
+  <section id="contactUs">
+    <div class="innerContactUSSection">
+      <div class="heading_container heading_center">
+        <h2>
+          <?php
+          echo $texts['contact_us']
+          ?>
+        </h2>
+      </div>
+      <form method="post" action="process_form.php">
+        <div class="inputContainer">
+          <label for="name">
+            <?php
+            echo $texts['contantus']['name']
+            ?>
+          </label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="inputContainer">
+          <label for="phone">
+            <?php
+            echo $texts['contantus']['phone']
+            ?>
+          </label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="inputContainer">
+          <label for="email">
+            <?php
+            echo $texts['contantus']['email']
+            ?>
+          </label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="inputContainer">
+          <label for="message">
+            <?php
+            echo $texts['contantus']['message']
+            ?>
+          </label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <input class="slider-link" type="submit" value="<?php echo $texts['contantus']['send'] ?>">
+      </form>
+    </div>
+  </section>
+  <!-- end contact us -->
+
+
 
   <!-- info section -->
   <section id="info_section" class="info_section">

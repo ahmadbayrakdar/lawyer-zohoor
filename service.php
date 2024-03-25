@@ -359,7 +359,6 @@ $texts = json_decode($json_data, true);
                   echo $texts['response_memorandum'];
                   ?>
                 </li>
-                <br />
                 <li>
                   <?php
                   echo $texts['company_formation'];

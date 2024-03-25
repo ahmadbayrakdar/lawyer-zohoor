@@ -402,7 +402,7 @@ body.ar .about_section .detail-box {
   font-size: 20px;
 }
 
-.slider_section .detail-box .slider-link {
+.slider-link {
   display: inline-block;
   padding: 10px 45px;
   background-image: linear-gradient(-180deg, rgb(174, 183, 199) 0%, rgb(94, 102, 136) 96%);
@@ -414,7 +414,7 @@ body.ar .about_section .detail-box {
   font-size: 20px;
 }
 
-.slider_section .detail-box .slider-link:hover {
+.slider-link:hover {
   /* background-color: transparent; */
   /* color: #ffffff; */
   background: rgb(94, 102, 136);
@@ -422,6 +422,7 @@ body.ar .about_section .detail-box {
 
 .slider_section .img-box{
   width: 100%;
+  height: 100%;
 }
 
 
@@ -429,6 +430,7 @@ body.ar .about_section .detail-box {
 .slider_section .img-box img {
   min-width: 100%;
   min-height: 100%;
+  height: 100%;
 }
 
 .slider_section .img-box::before {
@@ -894,7 +896,7 @@ body.ar .about_section .detail-box {
 .contact_section .form_container .heading_container {
   margin-bottom: 30px;
 }
-
+/* 
 .contact_section .form_container input {
   width: 100%;
   border: none;
@@ -926,7 +928,7 @@ body.ar .about_section .detail-box {
 
 .contact_section .form_container input.message-box {
   height: 120px;
-}
+} */
 
 .contact_section .form_container .btn_box {
   display: -webkit-box;
@@ -974,7 +976,7 @@ body.ar .about_section .detail-box {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-
+/* 
 .contact_section .subscribe-box form input {
   background-color: #ccc;
   height: 50px;
@@ -1000,7 +1002,7 @@ body.ar .about_section .detail-box {
 
 .contact_section .subscribe-box form input::placeholder {
   color: #555;
-}
+} */
 
 .contact_section .subscribe-box form button {
   background-color: transparent;
