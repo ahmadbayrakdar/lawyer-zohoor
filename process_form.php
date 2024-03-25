@@ -1,5 +1,19 @@
-<!-- process_form.php -->
 <?php
+
+// Define default language
+$lang = isset($_GET['lang']) ? $_GET['lang'] : 'ar';
+
+// Load language file based on body class
+$lang_file = ($lang == 'ar') ? './json/ar.json' : './json/en.json';
+$json_data = file_get_contents($lang_file);
+
+// Check if JSON data is loaded successfully
+if ($json_data === false) {
+    die('Failed to load language file');
+}
+
+$texts = json_decode($json_data, true);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $phone = $_POST['phone'];
@@ -14,9 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
-        echo "<p>Thank you for contacting us. We will get back to you soon!</p>";
+        // Redirect to a success page
+        header("Location: message-form/success.php?lang=$lang");
+        exit(); // Ensure no further code execution after redirection
     } else {
-        echo "<p>Oops! Something went wrong. Please try again later.</p>";
+        // Redirect to an error page
+        header("Location: message-form/error.php?lang=$lang");
+        exit(); // Ensure no further code execution after redirection
     }
 }
-?>

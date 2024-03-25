@@ -53,7 +53,7 @@ $texts = json_decode($json_data, true);
   <header class="header_section innerpage_header">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="index.php?lang=<?php echo $lang ?>">
           <!-- <span> Lawyer Zohoor </span> -->
           <img src="./images/small-logo.png" alt="logo" />
         </a>
@@ -73,22 +73,22 @@ $texts = json_decode($json_data, true);
 
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.php">
+                <a href="index.php?lang=<?php echo $lang ?>">
                   <?php
                   echo $texts['home'];
                   ?>
                 </a>
-                <a href="about.php">
+                <a href="about.php?lang=<?php echo $lang ?>">
                   <?php
                   echo $texts['about'];
                   ?>
                 </a>
-                <a href="service.php">
+                <a href="service.php?lang=<?php echo $lang ?>">
                   <?php
                   echo $texts['services'];
                   ?>
                 </a>
-                <a href="who_we_are.php">
+                <a href="who_we_are.php?lang=<?php echo $lang ?>">
                   <?php
                   echo $texts['get_to_know_us'];
                   ?>
